@@ -1,1 +1,19 @@
 /* Acá va tu código */
+   *{
+    text-align: center;
+    } 
+   body{
+     background-image: linear-gradient(#097582, #42e2f4);
+   }
+   h2 {
+     color: #000000;
+     text-align: center;}
+   p {
+     color: #000000;
+     text-align: center;}
+   .comentarios{
+     background:white;
+   }
+   .boton{
+     background: #829fa3;
+   }

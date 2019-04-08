@@ -4,18 +4,19 @@ window.cipher = {
       //Recorriendo mensaje
       let cifrado="";
       for (let i=0; i < texto1.length; i++){
-        console.log(texto1[i]);
+        //console.log(texto1[i]);
         //Variable para guardar ASCII
         let letra = texto1[i].charCodeAt();
-        console.log(letra);
+        //console.log(letra);
         //Variable para guardar ASCII con fórmula
         let nuevoCodigo = (letra-65+numeroIngresado)%26+65;
-        console.log(nuevoCodigo);
+        //console.log(nuevoCodigo);
         //Variable para convertir ASCII a letra
         let asciiLetra = String.fromCharCode(nuevoCodigo);
-        console.log(asciiLetra);
+        //console.log(asciiLetra);
         cifrado = cifrado += asciiLetra;
-        console.log(cifrado);}
+        //console.log(cifrado)
+        }
         //Return, resulatado FINAAAAL 
         return cifrado;
 
@@ -24,20 +25,21 @@ window.cipher = {
     /* Acá va tu código */
     let descifrado="";
     for (let i=0; i < texto1.length; i++){
-      console.log(texto1[i]);
+      //console.log(texto1[i]);
       //Variable para guardar ASCII
       let letra = texto1[i].charCodeAt();
-      console.log(letra);
+      //console.log(letra);
       //Variable para guardar ASCII con fórmula
       let nuevoCodigo = (letra+65-numeroIngresado)%26+65;
-      console.log(nuevoCodigo);
+      //console.log(nuevoCodigo);
       //Variable para convertir ASCII a letra
       let asciiLetra = String.fromCharCode(nuevoCodigo);
-      console.log(asciiLetra);
+      //console.log(asciiLetra);
       descifrado = descifrado += asciiLetra;
-      console.log(descifrado);}
+      //console.log(descifrado)
+    }
       //Return, resulatado FINAAAAL 
       return descifrado;
   }
-};
+}
 

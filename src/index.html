@@ -1,43 +1,31 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    
-  </head>
-  <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
-    </div>
-   
-  </body>
-</html> -->
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <title>Cipher</title>
         <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Slackey" rel="stylesheet">
         <meta charset="utf-8">
 </head>
 <body>
-   <h1>🕵🏼Crea tu mensaje secreto🕵🏼‍♀️</h1><br> 
+   <h1>🕵🏼Crea tu mensaje secreto🕵🏼‍♀️</h1>
   <h2>¡Con esta app puedes mantener mensajes en secreto, ocultar tus claves y la información que quieras de una manera muy sencilla!</h2>
   
-  <p><strong>Ingresa un número</p>
+  <p><strong>Ingresa un número</strong></p>
     
-  <input type="text" size="5" maxlength="3" id="numero"><br></br>
+  <input type="text" size="10" maxlength="3" id="numero"><br><br>
   
   <textarea id="texto1"  class="comentarios" rows="10" cols="40" placeholder="Ingresa tu mensaje"></textarea><br>
   
-  <p><strong>Ahora escoge una opción</p>
+  <p><strong>Ahora escoge una opción</strong></p>
   
-  <button  id="cifrar" class="boton">cifrar</button>
+  <button  id="cifrar" class="boton">Cifrar</button>
   
-  <button id="descifrar" class="boton">descifrar</button><br></br>
+  <button id="descifrar" class="boton">Descifrar</button><br><br>
 
   <textarea id="texto2" class="comentarios" rows="10" cols="40" placeholder="Tu mensaje secreto es:"></textarea><br>
   
-  <button id="limpiar" class="boton" type="submit" onclick="Limpiar">Limpiar</button>
+  <button id="limpiar" class="boton" type="submit">Limpiar</button><br><br>
   <script src="cipher.js"></script>
   <script src="index.js"></script>
   

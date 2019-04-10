@@ -1,40 +1,42 @@
 /* Acá va tu código */
-   *{
-    font-family: 'Slackey', cursive;
-    text-align: center;
-    } 
-   body{
-     background: url(numeros.png);
-     /* linear-gradient(#097582, #42e2f4); */
-   }
-   h1{
-    color: rgb(5, 5, 65);
-    -webkit-text-stroke: 1px rgb(94, 235, 240);
-    font-size: 50px;
-    font-family: 'Bungee Shade', cursive;
-   }
-   h2 {
-     color: rgb(5, 5, 65);
-     -webkit-text-stroke: 1px rgb(94, 235, 240);
-     font-size: 30px;
-     text-align: center;}
-   p {
-    color: rgb(5, 5, 65);
-    -webkit-text-stroke: 1px rgb(94, 235, 240);
-    font-size: 25px;
-    text-align: center;}
-  #numero{
-    border: black 1.5px solid;
-    margin: 5px;
+*{
+  font-family: 'Gochi Hand', cursive;
+  text-align: center;
+  } 
+ body{
+   background: url(img/numeros.png);
+ }
+ h1{
+  color: rgb(5, 5, 65);
+  font-size: 50px;
+  font-family: 'Bungee Shade', cursive;
+ }
+ h2 {
+   color: rgb(5, 5, 65);
+   font-size: 40px;
+   text-align: center;}
+ p {
+  color:  rgb(5, 5, 65);
+  font-size: 30px;
+  text-align: center;
   }
-   .comentarios{
-     background:white;
-     border: black 1.5px solid;
-     margin: 5px;
-   }
-   .boton{
-     background: #829fa3;
-     -webkit-text-stroke: -1px white;
-     border: black 1px solid;
-   }
+#numero{
+  border: black 1.5px solid;
+  margin: 5px;
+  font-size: 20px;
+}
+ .comentarios{
+   background:white;
+   border: black 1.5px solid;
+   margin: 5px;
+   font-size: 20px;
+ }
+ .boton{
+   background: #829fa3;
+   border: black 1px solid;
+   font-size: 20px;
+ }
+ ::placeholder{
+  font-size: 20px;
 
+ }

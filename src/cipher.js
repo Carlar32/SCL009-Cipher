@@ -1,45 +1,65 @@
 window.cipher = {
-  encode: (texto1, numeroIngresado) => {
-    /* Acá va tu código */
+  encode: (mensajeUsuario, offset) => {
       //Recorriendo mensaje
-      let cifrado="";
-      for (let i=0; i < texto1.length; i++){
-        //console.log(texto1[i]);
+      let nuevoTexto = "";
+      let nuevaLetra = "";
+      for (let i = 0; i < mensajeUsuario.length; i++){
         //Variable para guardar ASCII
-        let letra = texto1[i].charCodeAt();
-        //console.log(letra);
+        let letra = mensajeUsuario[i].charCodeAt(0);
+        // Cifrado en Mayúsculas
+        if (letra >= 65 && letra <= 90){
         //Variable para guardar ASCII con fórmula
-        let nuevoCodigo = (letra-65+numeroIngresado)%26+65;
-        //console.log(nuevoCodigo);
+            nuevaLetra = (letra - 65 + offset) % 26 + 65;
         //Variable para convertir ASCII a letra
-        let asciiLetra = String.fromCharCode(nuevoCodigo);
-        //console.log(asciiLetra);
-        cifrado = cifrado += asciiLetra;
-        //console.log(cifrado)
-        }
-        //Return, resulatado FINAAAAL 
-        return cifrado;
+            nuevoTexto += String.fromCharCode(nuevaLetra);
+      }
+        // Cifrado de minúsculas
+        else if (letra >= 97 && letra <= 122){
+            nuevaLetra = (letra - 97 + offset) % 26 + 97;
+            nuevoTexto += String.fromCharCode(nuevaLetra);     
+      }
+        // Cifrado números
+        else if (letra >= 48 && letra <= 57){
+            nuevaLetra = (letra - 48 + offset) % 10 + 48;
+            nuevoTexto += String.fromCharCode(nuevaLetra);  
+      }
+        else { // Guarda lo que encuentre y que no esté en los parámetros
+        nuevoTexto += mensajeUsuario[i];
+      }
+    }
+        //Return, resultado FINAAL 
+        return nuevoTexto;
 
 },
-  decode: (texto1, numeroIngresado) => {
-    /* Acá va tu código */
-    let descifrado="";
-    for (let i=0; i < texto1.length; i++){
-      //console.log(texto1[i]);
-      //Variable para guardar ASCII
-      let letra = texto1[i].charCodeAt();
-      //console.log(letra);
-      //Variable para guardar ASCII con fórmula
-      let nuevoCodigo = (letra+65-numeroIngresado)%26+65;
-      //console.log(nuevoCodigo);
-      //Variable para convertir ASCII a letra
-      let asciiLetra = String.fromCharCode(nuevoCodigo);
-      //console.log(asciiLetra);
-      descifrado = descifrado += asciiLetra;
-      //console.log(descifrado)
+  decode: (mensajeUsuario, offset) => {
+      let nuevoTexto = "";
+      let nuevaLetra = "";
+      for (let i = 0; i < mensajeUsuario.length; i++){
+        //Variable para guardar ASCII
+        let letra = mensajeUsuario[i].charCodeAt(0);
+        // Cifrado en Mayúsculas
+        if (letra >= 65 && letra <= 90){
+        //Variable para guardar ASCII con fórmula
+            nuevaLetra = (letra - 90 - offset) % 26 + 90;
+        //Variable para convertir ASCII a letra
+            nuevoTexto += String.fromCharCode(nuevaLetra);
+      }
+        // Cifrado de minúsculas
+        else if (letra >= 97 && letra <= 122){
+            nuevaLetra = (letra - 122 - offset) % 26 + 122;
+            nuevoTexto += String.fromCharCode(nuevaLetra);
+      }
+        // Cifrado números
+        else if (letra >= 48 && letra <= 57){
+            nuevaLetra = (letra - 57 - offset) % 10 + 57;
+            nuevoTexto += String.fromCharCode(nuevaLetra);
+      }
+        else { // Guarda lo que encuentre y que no esté en los parámetros
+        nuevoTexto += mensajeUsuario[i];
+      }
     }
-      //Return, resulatado FINAAAAL 
-      return descifrado;
-  }
-}
+        //Return, resultado FINAAL 
+        return nuevoTexto;
+   }
 
+  };
